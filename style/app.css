@@ -1,0 +1,7 @@
+body,div{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: url("../img/bg.jpg") no-repeat top center;
+}
