@@ -4,4 +4,6 @@ body,div{
 }
 body{
 	background: url("../img/bg.jpg") no-repeat top center;
+	background-size: 100%;
+	background-color: rgba(0,0,0,1);
 }
