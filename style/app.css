@@ -24,6 +24,7 @@ body{
 	line-height: 150px;
 	overflow: hidden;
 	font-size: 50px;
+	font-family: "微软雅黑";
 	color: rgba(0,0,0,0);
 	-webkit-text-stroke: 1.5px rgba(0,0,0,1);
 }
