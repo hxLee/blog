@@ -14,8 +14,9 @@ body{
 	height: auto;
 	min-height: 800px;
 	margin: 0 auto;
-	background: rgba(255,255,255,0.3);
+	background: rgba(255,255,255,0.5);
 	color: #fff;
+	position: relative;
 }
 #main header{
 	width: 100%;
@@ -27,5 +28,13 @@ body{
 	font-family: "微软雅黑";
 	font-weight: bold;
 	color: rgba(0,0,0,0);
-	-webkit-text-stroke: 3px rgba(0,0,0,1);
+	-webkit-text-stroke: 3px rgba(0,0,0,0.8);
+}
+#main footer{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
 }
