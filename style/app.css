@@ -23,5 +23,7 @@ body{
 	text-align: center;
 	line-height: 150px;
 	overflow: hidden;
-	font-size: 30px;
+	font-size: 40px;
+	color: rgba(0,0,0,0);
+	text-shadow: 0 0 3px rgba(255,255,255,1);
 }
