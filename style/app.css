@@ -10,12 +10,12 @@ body{
 	font-weight: bold;
 }
 #main{
-	width: 60%;
+	width: 80%;
 	min-width: 400px;
-	max-width: 900px;
+	max-width: 1920px;
 	height: auto;
 	min-height: 800px;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	/*background: rgba(255,255,255,0.5);*/
 	position: relative;
 }

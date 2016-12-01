@@ -117,7 +117,8 @@ function CMD(el){
     }
   }
   function printIndexHelp(){
-    hisRender(cmdH,["hello world"],false,false);
+    var helpIndex = HELP.index.split("FUCK");
+    hisRender(cmdH,helpIndex,false,false);
   }
 cmdIInit();
 }
