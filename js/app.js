@@ -32,7 +32,7 @@ function CMD(el){
         if(hasPrefix(cmdVal,PREFIX)){
           var len = PREFIX.length;
           var cmd_list_temp = [cmd_list[0].substring(len,cmd_list[0].length)];
-          helpType(cmdVal);
+          __help(cmdVal);
           cmdDealing(cmdH,cmd_list_temp,cmd_his_list);
         }else if(""===cmdVal){
           hisRender(cmdH,[""],false,true);
@@ -95,12 +95,29 @@ function CMD(el){
     var cmd_split = cmd.split(" ");
     return PREFIX === cmd_split[0] && "-help" === cmd_split[1];
   }
-  function helpType(cmd){
+  function __help(cmd){
     var cmd_split = cmd.split(" ");
-    if (!isHelp(cmd)) {
-      return false;
+    if (isHelp(cmd)) {
+      if(undefined === cmd_split[2]) {
+        printIndexHelp();
+      } 
+      else {
+        cmd_split.length > 3 && printError("syntax");
+        helpKeyword(cmd_split[2]);
+      }
+
+    } 
+    else {
+      if (cmd_split.length > 1 && PREFIX === cmd_split[0] && isCmd(cmd_split[1])) {
+        ["__"+cmd_split[1]]();
+      }
+      else {
+        printError("syntax");
+      }
     }
-    console.log(cmd_split[2]);
+  }
+  function printIndexHelp(){
+    hisRender(cmdH,["hello world"],false,false);
   }
 cmdIInit();
 }
