@@ -32,6 +32,7 @@ function CMD(el){
         if(hasPrefix(cmdVal,PREFIX)){
           var len = PREFIX.length;
           var cmd_list_temp = [cmd_list[0].substring(len,cmd_list[0].length)];
+          helpType(cmdVal);
           cmdDealing(cmdH,cmd_list_temp,cmd_his_list);
         }else if(""===cmdVal){
           hisRender(cmdH,[""],false,true);
@@ -73,23 +74,34 @@ function CMD(el){
   // 获取时间
   function getTime(type){
     var t = new Date();
-  var Y = t.getFullYear();
-  var M = (t.getMonth() + 1)<10 ? "0"+(t.getMonth() + 1) : (t.getMonth() + 1);
-  var D = t.getDate()<10 ? "0"+t.getDate() : t.getDate();
-  var h = t.getHours()<10 ? "0"+t.getHours() : t.getHours();
-  var m = t.getMinutes()<10 ? "0"+t.getMinutes() : t.getMinutes();
-  var s = t.getSeconds()<10 ? "0"+t.getSeconds() : t.getSeconds();
-  var res;
-  switch(type){
-    case "h:m:s":
-      res = "["+h+":"+m+":"+s+"]";
-    break;
-    case "Y-M-D h:m:s":
-      res = "["+Y+"-"+M+"-"+D+" "+h+":"+m+":"+s+"]";
-    break;
+    var Y = t.getFullYear();
+    var M = (t.getMonth() + 1)<10 ? "0"+(t.getMonth() + 1) : (t.getMonth() + 1);
+    var D = t.getDate()<10 ? "0"+t.getDate() : t.getDate();
+    var h = t.getHours()<10 ? "0"+t.getHours() : t.getHours();
+    var m = t.getMinutes()<10 ? "0"+t.getMinutes() : t.getMinutes();
+    var s = t.getSeconds()<10 ? "0"+t.getSeconds() : t.getSeconds();
+    var res;
+    switch(type){
+      case "h:m:s":
+        res = "["+h+":"+m+":"+s+"]";
+      break;
+      case "Y-M-D h:m:s":
+        res = "["+Y+"-"+M+"-"+D+" "+h+":"+m+":"+s+"]";
+      break;
+    }
+    return res;
   }
-  return res;
-};
+  function isHelp(cmd){
+    var cmd_split = cmd.split(" ");
+    return PREFIX === cmd_split[0] && "-help" === cmd_split[1];
+  }
+  function helpType(cmd){
+    var cmd_split = cmd.split(" ");
+    if (!isHelp(cmd)) {
+      return false;
+    }
+    console.log(cmd_split[2]);
+  }
 cmdIInit();
 }
 var cmd_box = document.getElementById("cmd_box");
