@@ -32,8 +32,8 @@ function CMD(el){
         if(hasPrefix(cmdVal,PREFIX)){
           var len = PREFIX.length;
           var cmd_list_temp = [cmd_list[0].substring(len,cmd_list[0].length)];
-          __help(cmdVal);
           cmdDealing(cmdH,cmd_list_temp,cmd_his_list);
+          __help(cmdVal);
         }else if(""===cmdVal){
           hisRender(cmdH,[""],false,true);
         }else{
