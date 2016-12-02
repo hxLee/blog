@@ -8,34 +8,45 @@ body{
 	color: rgba(0,200,0,0.8);
 	background-color: rgba(0,0,0,1);
 	font-weight: bold;
+	font-size: 14px;
 }
 #main{
-	width: 80%;
+	width: 99%;
+	height: auto;
 	min-width: 400px;
 	max-width: 1920px;
-	height: auto;
-	min-height: 800px;
+	/*height: auto;*/
+	min-height: 100vh;
+	box-sizing: border-box;
 	/*margin: 0 auto;*/
 	/*background: rgba(255,255,255,0.5);*/
-	position: relative;
+	padding: 160px 0 60px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
-#main header{
+header{
 	width: 100%;
 	height: 150px;
 	text-align: center;
 	line-height: 150px;
+	position: fixed;
+	top: 0;
+	left: 0;
 	overflow: hidden;
 	font-size: 58px;
 	font-family: "微软雅黑";
 	font-weight: bold;
 	color: rgba(0,0,0,0);
+	background: rgba(0,0,0,1);
 	-webkit-text-stroke: 3px rgba(0,200,0,0.8);
 }
-#main footer{
+footer{
 	width: 100%;
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
+	background: rgba(0,0,0,1);
 }

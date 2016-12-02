@@ -22,7 +22,7 @@ function CMD(el){
     cmdI.style.marginTop = -(promptHeight)+"px";
     cmdO.onclick = function(){
       cmdI.focus();
-    }
+    };
     cmdI.onkeydown = function(event){
       var keyCode = event.keyCode || event.which;
       if(13===keyCode){
@@ -118,6 +118,7 @@ function CMD(el){
   }
   function printIndexHelp(){
     var helpIndex = HELP.index.split("FUCK");
+    console.log(helpIndex);
     hisRender(cmdH,helpIndex,false,false);
   }
 cmdIInit();
