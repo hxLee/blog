@@ -6,9 +6,15 @@ It is designed like a `terminal` that you input commands to do something. There 
 address: [小白Lee爱喝大白梨](http://hxlee.github.io/blog)
 
 ## BASIC GRAMMAR
-`Let prefix equals to `g`.` Then:
+Let prefix equals to `g`. Then:
 
-> There are several styles of command rows: 
+There are several styles of command rows: 
+
 > * g keyword
 > * g keyword mark(s)
 > * g keyword status
+
++ g keyword
+```
+Commands without arguments.Such as `g -version`, it's only a command row that returns the version of the site.
+```
