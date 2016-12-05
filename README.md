@@ -14,7 +14,7 @@ There are several styles of command rows:
 > * g keyword mark(s)
 > * g keyword status
 
-+ g keyword
+### g keyword
 ```
-Commands without arguments.Such as `g -version`, it's only a command row that returns the version of the site.
+Commands without arguments.Such as *g -version*, it's only a command row that returns the version of the site.
 ```
